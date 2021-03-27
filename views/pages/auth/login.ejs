@@ -1,0 +1,36 @@
+<%- include('../../templates/header')  %> 
+    <div class="h-screen  flex flex-wrap flex-col justify-center content-center ">
+        <div class="w-full md:w-96 bg-white bg-opacity-10 border border-white border-opacity-10 rounded-lg p-8 ">
+            
+            <form method="POST">
+                <div class="text-center">
+                    <h2 class="text-xl font-bold">Application app</h2>
+                </div>
+                <% if (error.length) { %>
+                    <div class="my-3 px-5 py-3 bg-red-400 text-white rounded-md">
+                        <%= error %> 
+                    </div>
+                <% } %>
+                <div class="flex flex-row justify-center flex-wrap my-3">
+                    Don't have an account yet?<a href="/register" class="text-white hover:font-bold transition duration-100 transform hover:scale-105">&nbsp;Sign up.</a>
+                </div>
+                <div class="flex flex-col flex-wrap my-3">
+                    <label class="text-white pb-2 font-semibold" for="username">Username</label>
+                    <input type="text" class="text-gray-800 px-4 py-2 outline-none rounded-md focus:ring-2" name="username" id="username" placeholder="Username">
+                </div>
+                <div class="flex flex-col flex-wrap my-3">
+                    <label class="text-white pb-2 font-semibold"for="password">Password</label>
+                    <input type="password" class="text-gray-800 px-4 py-2 outline-none rounded-md focus:ring-2 " name="password" id="password" placeholder="Password">
+                </div>
+                <div class="flex flex-col flex-wrap my-3">
+                    <button type="submit" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md cursor-pointer transition transition-all">Sign in</button>
+                </div>
+                <div class="flex flex-row-reverse flex-wrap my-3">
+                    <a href="#" class="text-white hover:text-purple-200">Fogot your password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('../../templates/footer')  %> 
+
+        

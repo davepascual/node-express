@@ -1,0 +1,11 @@
+<%- include('header')  %> 
+    <div class="container">
+        <div>
+            <% users.forEach(user => { %>
+                <%- include('../components/user_box', {user:user});  %>
+            <% }) %>
+        </div>
+    </div>
+<%- include('footer')  %> 
+
+        
